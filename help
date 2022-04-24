@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> title does here</title>
+<style>
+        input[type=button] {
+            color: white;
+            background-color: blue;
+            width: 30px;
+            height: 30px;
+            font-size: 10px;
+
+        }
+        input[type=number] {
+            background-color: #ffffc9;
+        }
+        #res {
+            font-weight: 1000;
+            color: red;
+
+        }
+        
+        
+    </style>
+
+
+<script>
+        function triangulo()
+        {
+            var a=parseFloat(document.getElementById("base").value);
+            var b=parseFloat(document.getElementById("altura").value);
+            var triangulo = (a * b)/2;
+            document.getElementById("restri").innerHTML = "Resultado: " + triangulo;
+        }
+
+        function quadrado()
+        {
+            var a=parseFloat(document.getElementById("base").value);
+            var quadrado = a * a;
+            document.getElementById("resq").innerHTML = "Resultado: " + quadrado;
+        }
+
+        function trapezio()
+        {
+            var a=parseFloat(document.getElementById("basemaior").value);
+            var b=parseFloat(document.getElementById("basemenor").value);
+            var c=parseFloat(document.getElementById("altura").value);
+            var trapezio = ((a + b)*c)/2;
+            document.getElementById("restra").innerHTML = "Resultado: " + trapezio;
+        }
+
+        function retangulo()
+        {
+            var a=parseFloat(document.getElementById("base").value);
+            var b=parseFloat(document.getElementById("altura").value);
+            var retangulo = a * b;
+            document.getElementById("resr").innerHTML = "Resultado: " + retangulo;
+        }
+        function circulo()
+        {
+            var a=parseFloat(document.getElementById("n1").value);
+            var circulo = 3.16 * (a*a) ;
+            document.getElementById("resc").innerHTML = "Resultado: " + circulo;
+        }
+
+    </script>
+
+
+</head>
+<body>
+	
+<table border="1" >
+<tr>  
+<td> Triangulo </td>
+<td> Quadrado </td>
+<td> Trapezio </td>
+<td> Retangulo </td>
+<td> circulo </td>
+</tr>
+<tr>  
+<td>  
+	<p>base:</p><input type="number" id="base">
+ <p>altura:</p><input type="number" id="altura">
+ <input type="button" onclick="triangulo()" value="calc. area">
+<p id="restri">Área: </p>
+</td>
+
+<td>  
+	<p>base:</p><input type="number" id="base">
+ <input type="button" onclick="quadrado()" value="calc. area">
+<p id="resq">Área: </p>
+</td>
+
+<td>  
+	<p>base maior:</p><input type="number" id="basemaior">
+ <p>base menor:</p><input type="number" id="basemenor">
+ <p>altura:</p><input type="number" id="altura">
+ <input type="button" onclick="trapezio()" value="calc. area">
+<p id="restra">Área: </p>
+</td>
+
+<td>  
+	<p>base:</p><input type="number" id="base">
+ <p>altura:</p><input type="number" id="altura">
+ <input type="button" onclick="retangulo()" value="calc. area">
+ <p id="res">Área: </p>
+</td>
+
+<td>  
+	<p>raio:</p><input type="number" id="raio">
+ <input type="button" onclick="circulo()" value="calc. area">
+<p id="resc">Área: </p>
+</td>
+</tr> 	
+
+</table>
+
+    
+
+</body>
+</html>
